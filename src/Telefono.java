@@ -65,5 +65,25 @@ public class Telefono {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+    
+    //Validamos el precio no puede ser negativo.
+    //Si el valor ingresado es inválido, se muestra un mensaje y no se aplica el cambio.
+    public void setPrecio(double precio) {
+        if (precio < 0) {
+            System.out.println("[ERROR] El precio no puede ser negativo. Se mantuvo el valor anterior.");
+        } else {
+            this.precio = precio;
+        }
+    }
+ 
+    
+    //Imprimimos en consola la información completa del teléfono.
+    public void mostrarInfo() {
+        System.out.println("===== Información del Teléfono =====");
+        System.out.println("Marca   : " + marca);
+        System.out.println("Modelo  : " + modelo);
+        System.out.println("Precio  : $" + precio);
+        System.out.println("=====================================");
+    }
 }
  
