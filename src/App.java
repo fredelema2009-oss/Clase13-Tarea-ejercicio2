@@ -23,3 +23,35 @@ teléfono.
 información, cambiar algunos datos con setters y volver a mostrar el
 resultado.
 */
+
+// Clase principal donde se ejecuta el programa
+public class App {
+    public static void main(String[] args) {
+        System.out.println("═════════════════════════════════");
+        System.out.println("     EJERCICIO 2 — TELEFONO      ");
+        System.out.println("═════════════════════════════════");
+ 
+        // Creación del objeto Telefono con valores iniciales
+        Telefono telefono1 = new Telefono("Samsung", "A15", 250.0);
+ 
+        // Mostramos la información inicial usando el método de la clase
+        System.out.println("-- Estado inicial --");
+        telefono1.mostrarInfo();
+ 
+        // Prueba de setter VÁLIDO: cambiamos el precio a un valor correcto
+        System.out.println("-- Cambio de precio válido (350.0) --");
+        telefono1.setPrecio(350.0);
+        telefono1.mostrarInfo();
+ 
+        // Prueba de setter INVÁLIDO: intentamos asignar un precio negativo
+        System.out.println("-- Intento de precio inválido (-50.0) --");
+        telefono1.setPrecio(-50.0);   // Debe mostrar mensaje de error y NO cambiar el precio
+        telefono1.mostrarInfo();      // El precio debe seguir siendo 350.0
+ 
+        // También podemos leer atributos individualmente usando los getters
+        System.out.println("-- Lectura individual con getters --");
+        System.out.println("Marca   : " + telefono1.getMarca());
+        System.out.println("Modelo  : " + telefono1.getModelo());
+        System.out.println("Precio  : $" + telefono1.getPrecio());
+    }
+}
