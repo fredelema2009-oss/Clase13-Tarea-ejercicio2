@@ -40,5 +40,30 @@ public class Telefono {
         this.modelo = modelo;
         setPrecio(precio); // Usamos el setter para validar desde el inicio
     }
+
+    //Inicializamos los getters y los retornamos
+    public String getMarca() {
+        return marca;
+    }
+ 
+    // Retorna el modelo del teléfono
+    public String getModelo() {
+        return modelo;
+    }
+ 
+    //Retorna el precio del teléfono 
+    public double getPrecio() {
+        return precio;
+    }
+ 
+    // Inicializamos los setters y modifica la marca del teléfono
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+ 
+    // Modifica el modelo del teléfono
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 }
  
